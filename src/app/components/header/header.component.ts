@@ -12,5 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  toggleAddTask(){
+    console.log("Boton apretado");
+  }
 }
