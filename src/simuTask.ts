@@ -1,5 +1,5 @@
-import { interTask} from "./iTask"
-export const tareasLista: interTask[] = [
+import { TaskInterface} from "./iTask"
+export const tareasLista: TaskInterface[] = [
     {
         id: 1,
         text: "Terminar el primer módulo de angular",

@@ -1,0 +1,18 @@
+.taskcss{
+    background-color: #f4f4f4;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.taskcss h3{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+}
+.taskcss.reminder{
+    border-left: 5px solid green;
+}
+
+.icono{
+    color: red;     
+}

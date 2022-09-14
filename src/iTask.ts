@@ -1,4 +1,4 @@
-export interface interTask {
+export interface TaskInterface {
     id?: number;
     text: string;
     day: string;
