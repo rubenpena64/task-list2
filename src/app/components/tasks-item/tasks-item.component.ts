@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TaskInterface } from 'src/iTask';
 import { tareasLista } from 'src/simuTask';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-tasks-item',
@@ -9,6 +11,8 @@ import { tareasLista } from 'src/simuTask';
 })
 export class TasksItemComponent implements OnInit {
   @Input() tareaEnItem: TaskInterface = tareasLista[0];
+  icoCruz = faTimes;
+
   constructor() { }
 
   ngOnInit(): void {
