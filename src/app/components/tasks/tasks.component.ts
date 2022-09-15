@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../../service/task.service';
 import { TaskInterface } from 'src/iTask';
-import { tareasLista } from 'src/simuTask';
+//import { tareasLista } from 'src/simuTask';
 
 
 @Component({
@@ -9,10 +10,23 @@ import { tareasLista } from 'src/simuTask';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
- tareasArray: TaskInterface[] = tareasLista;
-  constructor() { }
+  tareasArray: TaskInterface[] = [];
+
+  constructor(
+    private taskService: TaskService
+  ) { }
 
   ngOnInit(): void {
+    this.taskService.getTask().subscribe((unaCualquiera) => {
+      this.tareasArray = unaCualquiera;
+      console.log(unaCualquiera);
+    });
+
+
   }
 
+
 }
+
+
+
