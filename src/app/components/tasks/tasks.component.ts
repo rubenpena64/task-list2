@@ -17,16 +17,30 @@ export class TasksComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.taskService.getTask().subscribe((unaCualquiera) => {
-      this.tareasArray = unaCualquiera;
-      console.log(unaCualquiera);
+    this.taskService.getTask().subscribe((unaVarCualquiera) => {
+      this.tareasArray = unaVarCualquiera;
     });
+  }
+  delete(tareaRecibida: TaskInterface) {
+    this.taskService.deleteTask(tareaRecibida)
+      .subscribe(() => {
+        this.tareasArray = this.tareasArray.filter((t) => {
+          return t.id !== tareaRecibida.id;
+        })
+      })
+  }
+  toggleReminder(tareaRecibida: TaskInterface) {
+    tareaRecibida.reminder = !tareaRecibida.reminder
 
-
+    this.taskService.updateTaskReminder(tareaRecibida).subscribe();
   }
 
-
+  addTask(tareaRecibida: TaskInterface) {
+    console.log(tareaRecibida);
+    this.taskService.addTask(tareaRecibida).subscribe((tareaRecibida) =>
+      this.tareasArray.push(tareaRecibida)
+    )
+  }
 }
-
 
 

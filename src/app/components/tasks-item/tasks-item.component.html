@@ -1,7 +1,12 @@
-<div class="taskcss">
+
+<div class="taskcss"
+     [ngClass]="{reminder: tareaEnItem.reminder}"
+      (click)="onToggle(tareaEnItem)"
+      >
     <h3>
          {{tareaEnItem.text}}  
-         <fa-icon class="icono" [icon]="icoCruz" ></fa-icon>
+         <fa-icon class="icono" [icon]="icoCruz" 
+         (click)="onDelete(tareaEnItem)"></fa-icon>
     </h3>
     <P>{{tareaEnItem.day}}</P>
 </div>

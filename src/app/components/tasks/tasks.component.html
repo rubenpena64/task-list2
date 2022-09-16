@@ -1,7 +1,9 @@
+<app-add-task (onAddTask)="addTask($event)" ></app-add-task>
 <app-tasks-item 
  *ngFor="let unaTarea of tareasArray"
    [tareaEnItem] = "unaTarea"
-
+   (onDeleteTask)="delete(unaTarea)"
+   (onToggleReminder)="toggleReminder(unaTarea)"
 ></app-tasks-item>
     <!--
 <app-tasks-item *ngFor="let tarea of tasks"

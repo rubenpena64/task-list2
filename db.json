@@ -7,28 +7,22 @@
       "reminder": true
     },
     {
-      "id": 2,
-      "text": "Hacer las compras para la cena",
-      "day": "Agosto 5 a las 17:00",
-      "reminder": false
-    },
-    {
       "id": 3,
       "text": "Investigar sobre Boostrap",
       "day": "Agosto 5 a las 19:00",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 4,
-      "text": "Leer en un libro",
+      "text": "Leer en mi libro",
       "day": "Agosto 5 a las 21:00",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 5,
       "text": "Ir al correo",
       "day": "Agosto 6 a las 21:00",
-      "reminder": true
+      "reminder": false
     }
   ]
 }
