@@ -3,20 +3,13 @@
      [ngClass]="{reminder: tareaEnItem.reminder}"
       (click)="onToggle(tareaEnItem)"
       >
-    <h3>
+    <h3 [ngStyle]="{'color': estiloVencido}">
          {{tareaEnItem.text}}  
          <fa-icon class="icono" [icon]="icoCruz" 
          (click)="onDelete(tareaEnItem)"></fa-icon>
     </h3>
-    <P>{{tareaEnItem.day}}</P>
+  
+    <P>El {{diaEnDate | date: ' d/M/yy'}} a las {{diaEnDate | date: ' HH:mm'}}</P>
 </div>
 
-<!--<div class="task" [ngClass]="{reminder: task.reminder}" (click)="onToggle(task)">
-    <h3>
-        {{task.text}}
-        <fa-icon class="icono" [icon]="faTimes"  (click)="onDelete(task)" ></fa-icon>
-    </h3>
-  
-    <P>{{task.day}}</P>
-</div>-->
 

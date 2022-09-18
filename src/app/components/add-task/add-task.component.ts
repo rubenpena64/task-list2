@@ -12,10 +12,12 @@ export class AddTaskComponent implements OnInit {
   @Output() onAddTask: EventEmitter<TaskInterface> = new EventEmitter();
 
   text: string = "";
-  day: string = "";
+  day: string="";
+  
   reminder: boolean = false;
   showFormu: boolean = false;
   subcript: Subscription;
+ 
 
   constructor(
     private uiService: UiService
@@ -28,8 +30,13 @@ export class AddTaskComponent implements OnInit {
       alert("Debe ingresar un texto")
       return
     }
-    const { text, day, reminder } = this
-    const newTask = {  text, day, reminder }
-    this.onAddTask.emit(newTask);
+    if (!this.day) {
+      alert("Debe fecha y hora")
+      return
+    }
+   
+   const { text, day, reminder } = this
+   const newTask = {  text, day, reminder }
+   this.onAddTask.emit(newTask);
 }
 }

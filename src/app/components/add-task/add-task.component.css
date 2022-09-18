@@ -1,3 +1,13 @@
 .add-form{
     margin-bottom:  40px;
 }
+.tiempo{
+    display: flex;   
+    margin-top: 0;   
+}
+.dia{
+    flex: 2;
+}
+.hora{
+    flex: 1;
+}
